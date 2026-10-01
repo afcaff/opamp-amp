@@ -4,4 +4,4 @@ vi = 100 mV
 vo = 1.1 V
 
 When vi is >=1V, clipping occurs.
-Due to the 7.5V in / out, the max is clipped ~6V due to +-7.5 Vdc Limit.
+limited by power supply, clips ~6V.
