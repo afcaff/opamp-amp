@@ -1,0 +1,3 @@
+First test!
+I grabbed the TL072 pspice model from TI. Then I imported the model, and tested using the op-amp voltage buffer circuit
+AF

@@ -1,0 +1,8 @@
+STATUS: PSpice Schematics to Capture translator (25.1.0.d001)
+STATUS:  
+STATUS: Translator started at Tuesday, September 29, 2026 23:23:06
+STATUS: C:\Cadence\OrCADX_25.1\tools\bin\sch2cap -f "C:\Sync\projects\ompamp_preamp\docs\spice\TL072.lib" -o "C:\Sync\projects\ompamp_preamp\docs\spice\TL072.olb" -i C:\Users\adrian\AppData\Roaming\SPB_Data\.\cdssetup\OrCAD_PSpice/25.1.0/PSpice.ini
+INFO(ORSCH-1029): Using existing library 'C:\Cadence\OrCADX_25.1\tools\Capture\Library\PSpice\modeled.etc'.
+INFO(ORSCH-1031): Created new library 'C:\Sync\projects\ompamp_preamp\docs\spice\TL072.olb'.
+STATUS: Translator stopped at Tuesday, September 29, 2026 23:23:07
+STATUS: 0 Error messages, 0 Warning messages
