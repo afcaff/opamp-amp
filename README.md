@@ -35,3 +35,7 @@ $$
 $$
 A_V[dB]  = 20\times log (\frac{V_o}{V_i})
 $$
+###### filter frequency
+$$
+\frac{1}{2 \pi RC}
+$$

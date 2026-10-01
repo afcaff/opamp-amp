@@ -1,0 +1,19 @@
+Built the gain stage of the opamp circuit!
+https://www.youtube.com/watch?v=Qc_hngcqq7A
+I found this video so very helpful for understanding capacitor uuses in the opamp circuit.
+Also grabbed the idea of using the TLE2426 "rail splitter" from the same video.
+
+This post helped me understand the CG in series with Resitor to ground. for noninverting amp. ( its for single supply voltages)
+https://www.reddit.com/r/AskElectronics/comments/4yem64/accoupled_noninverting_op_amp_why_the_capacitor/
+
+https://www.renesas.com/en/document/apn/r13an0003-how-bias-op-amps-correctly helped with single supply
+C1-> blocks DC in
+CG -> step down DC gain to 1 on low frequencies. (unity gain)
+CL -> blocks DC out
+
+Overall this circuit was very much a pain to build and understand.
+I was able to find a few more circuits to reference but understanding the point of each component took some figuring out.
+
+Two highpass filter filter:
+R1C1 = 1.6 Hz
+RLCL = 0.16Hz <- RLCL will be replaced by next section of amplifier.

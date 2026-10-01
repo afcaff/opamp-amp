@@ -1,0 +1,13 @@
+NONINVERTING AMP WITH 100K POTENTIOMETER
+added in 100k POTENTIOMETER, which is now the R_F.
+using the PARAM part was able to get simulate a functioning potentiometer for a sweep.
+I noticed that there was some fall off after 10kHz and it gets smaller @ 100k Hz.
+
+--
+AC SWEEP/NOISE
+logarithmic: Decade
+start: 1k
+end: 100k
+points/Decade: 100
+Parametric sweep 	: x
+					: 0.001 0.25 0.5 0.75 1.0
