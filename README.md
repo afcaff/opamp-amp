@@ -16,7 +16,7 @@ Variable PSU set to **15V**
 * 2.2nf - 1uF Caps (lytic, ceramic, film)
 * assortment of resistors
 
-##### goals
+###### goals
 * Proper simulation of the opamp circuits, full design and testing of the opamp preamp circuit **done in pspice** 
 * **Breadboard prototyping**
 * Verify design. Building each stage to confirm audio produced is undistorted and clean.
