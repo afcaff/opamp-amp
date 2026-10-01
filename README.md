@@ -24,6 +24,14 @@ Variable PSU set to **15V**
 * **Design the schematic and PCB layout in KiCad** 
 
 
+*Equations*
 
+###### gain of non inverting amplifier
+$$
+\frac {V_o}{V_i} = 1 + \frac{R_F}{R_G}
+$$
 
-
+###### gain to dB
+$$
+A_V[dB]  = 20\times log (\frac{V_o}{V_i})
+$$
