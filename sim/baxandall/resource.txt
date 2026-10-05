@@ -1,0 +1,18 @@
+https://learnabout-electronics.org/Amplifiers/amplifiers42.php
+The circuit discussed here is an example of the Baxandall tone control circuit, illustrated in Fig. 4.2.2,
+which is an analogue circuit providing independent control of bass and treble frequencies; 
+both bass and treble can be boosted or cut and with both controls at their mid positions, 
+provides a relatively flat frequency response, 
+as illustrated by the blue ‘Level response’ graph line in Fig. 4.2.5. 
+
+With both Potentiometers set to max boost R1 & C2 form a low pass filter , the higher frequency will travel through the treble.
+With both Potentiometers set to max cut R2 & C1 form a high pass filter, the lower frequency will travel through the bass.
+The potentiometers are adjusted to find the ideal midpoint.
+
+helpful video for visualizing the path of the frequency through the circuit.
+https://www.youtube.com/watch?v=f8DllUXnWA0
+
+Building the Baxandall circuit has been the most fascinating thing to me! Truly remarkable to me at the moment.
+To see the the shelf change and and all of the curves with the sweep ( simulating turning the knob ) was absolutely amazing.
+i have seen the Baxandall Responsive curve as I researched this topic but to simulate the circuit and see the exact response I was hoping is such an amazing feeling.
+

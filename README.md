@@ -39,3 +39,6 @@ $$
 $$
 \frac{1}{2 \pi RC}
 $$
+
+Resource that was very useful to me during this project 
+https://sound-au.com/index.html
