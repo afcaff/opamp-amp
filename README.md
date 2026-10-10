@@ -1,8 +1,8 @@
 ###### spec target
 Gain: 0 - 20 dB adjustable
 Frequency response: 20Hz to 20kHz ±0.5 dB
-Bass range:  ±12 dB at 100kHz 
-Treble range: ±12 dB at 10kHz
+Bass range:  ±12 dB at 50Hz 
+Treble range: ±12 dB at 1kHz
 
 ###### supply
 Variable PSU set to **15V**
