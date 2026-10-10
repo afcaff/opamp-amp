@@ -93,7 +93,7 @@ Every tone measurement landed within about 1.3 dB of the calculation, and most w
 - **60 Hz hum.** Ground loop between the bench supply and the JBL speaker on its wall charger. Gone with the speaker on battery.
 - **Channels seemed to swap.** The STX-3000 jack tabs made bad contact in the breadboard. Soldering Dupont leads to the tabs fixed it.
 - **"No signal."** Laptop volume was at 10%, so the gain stage output was only 7 mV. At 100% the 50 Hz tone distorted and shrank the bass range, so I measured at about 70%.
-- **Tone stage input sagged about 20% at full bass boost.** I ruled out the pot, perfboard leakage, header placement, the coupling cap, C<sub>T</sub>, and the TL072 itself, and found a leftover 33k test resistor that made it worse. The sag went away with the speaker unplugged, so the cause is a shared ground return between the output and the input/gain stage on the breadboard. The fix is a star ground on the PCB, with the input and output jack sleeves on separate traces back to the TLE2426.
+- **Tone stage input sagged about 20% at full bass boost.** I ruled out the pot, perfboard leakage, header placement, the coupling cap, C<sub>T</sub>, and the TL072 itself, and found a leftover 33k test resistor that made it worse. The sag went away with the speaker unplugged, so the cause is a shared ground return between the output and the input/gain stage on the breadboard.
 
 ## Equations
 
