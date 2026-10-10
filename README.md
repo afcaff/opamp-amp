@@ -6,9 +6,10 @@ A phone or laptop plugs into the input and the output goes to a powered speaker.
 
 ## Demo video
 
-[![Demo video: full preamp on the breadboard](media/complete.jpg)](media/demo.mp4)
 
-Click the photo to watch the demo ([media/demo.mp4](media/demo.mp4)).
+
+https://github.com/user-attachments/assets/7785a830-bcad-4880-86f1-33a1208d45af
+
 
 ## Specs
 
@@ -46,7 +47,11 @@ All readings were taken with a multimeter on AC volts, black probe on the virtua
 
 ![gain stage](media/gain.jpg)
 
-Gain stage demo: [media/gain_demo.mp4](media/gain_demo.mp4)
+Gain stage demo: 
+
+https://github.com/user-attachments/assets/4122d86a-5e63-4376-95ca-5aafc3da9cc8
+
+
 
 | Gain pot | In (V) | Out (V) | Gain | dB | PSpice (dB) |
 |---|---|---|---|---|---|
