@@ -10,6 +10,9 @@ A phone or laptop plugs into the input and the output goes to a powered speaker.
 
 https://github.com/user-attachments/assets/7785a830-bcad-4880-86f1-33a1208d45af
 
+Labeled Circuit: 
+<img width="3069" height="2058" alt="complete" src="https://github.com/user-attachments/assets/e5e64338-83dd-44fc-af5b-edf8cb9388d1" />
+
 
 ## Specs
 
