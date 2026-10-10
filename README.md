@@ -116,3 +116,8 @@ PSpice, KiCad
 ## Resources
 
 Rod Elliott's site [sound-au.com](https://sound-au.com/index.html) explained most of what I needed for this project.
+
+[Learn About Electronics: Baxandall tone control](https://learnabout-electronics.org/Amplifiers/amplifiers42.php) explains how the bass and treble controls work and what the response looks like with the pots centered.
+
+[This video](https://www.youtube.com/watch?v=f8DllUXnWA0) helped me see which path each frequency takes through the tone circuit.
+ 
