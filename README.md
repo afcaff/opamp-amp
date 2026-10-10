@@ -1,6 +1,6 @@
 # Op-Amp Preamp
 
-Single-channel audio preamp with gain, bass and treble controls, built around a TL072. I simulated it in PSpice, built it on a breadboard and measured it against my hand calculations. The PCB in KiCad is next.
+Single-channel audio preamp with gain, bass and treble controls, built around a TL072. I simulated it in PSpice, built it on a breadboard and measured it against my hand calculations.
 
 A phone or laptop plugs into the input and the output goes to a powered speaker. The gain knob turns the signal up to about 11x, and the bass and treble knobs boost or cut by about 12 dB.
 
