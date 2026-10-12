@@ -62,7 +62,7 @@ Schematic: [docs/PrintUSchematic.pdf](docs/PrintUSchematic.pdf)
 
 ### Files
  
-- KiCad project: [`kicad/`](kicad/) (schematic, board, and custom footprint library)
+- KiCad project: [`kicad/`](kicad/) 
 - Gerbers: [`kicad/gerbers/opamp-amp-gerbers.zip`](kicad/gerbers/opamp-amp-gerbers.zip).
 
  
