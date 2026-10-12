@@ -63,7 +63,7 @@ Schematic: [docs/PrintUSchematic.pdf](docs/PrintUSchematic.pdf)
 ### Files
  
 - KiCad project: [`kicad/`](kicad/) 
-- Gerbers: [`kicad/gerbers/opamp-amp-gerbers.zip`](kicad/gerbers/opamp-amp-gerbers.zip).
+- Gerbers: [`kicad/gerbers/opamp-amp-gerbers.zip`](kicad/gerbers/opamp-amp-gerbers.zip)
 
  
 ## Breadboard measurements
