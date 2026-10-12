@@ -6,17 +6,12 @@ A phone or laptop plugs into the input and the output goes to a powered speaker.
 
 ## Demo video
 
-
-
-<<<<<<< HEAD
-=======
 https://github.com/user-attachments/assets/7785a830-bcad-4880-86f1-33a1208d45af
 
 Labeled Circuit: 
 <img width="3069" height="2058" alt="complete" src="https://github.com/user-attachments/assets/e5e64338-83dd-44fc-af5b-edf8cb9388d1" />
 
 
->>>>>>> 9a764a377264ab50dceae4720dc4e1f97ffaf872
 ## Specs
 
 | | Target | Calculated | Measured (breadboard) |
@@ -53,7 +48,11 @@ All readings were taken with a multimeter on AC volts, black probe on the virtua
 
 ![gain stage](media/gain.jpg)
 
-Gain stage demo: [media/gain_demo.mp4](media/gain_demo.mp4)
+Gain stage demo: 
+
+https://github.com/user-attachments/assets/f91d0bfd-d7b4-4a68-a31d-0bf0310b4c41
+
+
 
 | Gain pot | In (V) | Out (V) | Gain | dB | PSpice (dB) |
 |---|---|---|---|---|---|
@@ -92,11 +91,8 @@ Every tone measurement landed within about 1.3 dB of the calculation, and most w
 - **60 Hz hum.** Ground loop between the bench supply and the speaker on its wall charger. Gone with the speaker on battery.
 - **Channels seemed to swap.** The STX-3000 jack tabs made bad contact in the breadboard. Soldering Dupont leads to the tabs fixed it.
 - **"No signal."** Laptop volume was at 10%, so the gain stage output was only 7 mV. At 100% the 50 Hz tone distorted and shrank the bass range, so I measured at about 70%.
-<<<<<<< HEAD
 - **Tone stage input sagged about 20% at full bass boost.** I ruled out the pot,header placement, the coupling cap, C<sub>T</sub>, and the TL072 itself, and found a leftover 33k test resistor that made it worse. The sag went away with the speaker unplugged, so the cause is a shared ground return between the output and the input/gain stage on the breadboard.
-=======
 - **Tone stage input sagged about 20% at full bass boost.** I ruled out the pot, header placement, the coupling cap, C<sub>T</sub>, and the TL072 itself, and found a leftover 33k test resistor that made it worse. The sag went away with the speaker unplugged, so the cause is a shared ground return between the output and the input/gain stage on the breadboard.
->>>>>>> 9a764a377264ab50dceae4720dc4e1f97ffaf872
 
 ## Equations
 
@@ -118,13 +114,8 @@ PSpice, KiCad
 
 ## Resources
 
-<<<<<<< HEAD
-Rod Elliott's site [sound-au.com](https://sound-au.com/index.html) explained most of what I needed for this project.
-=======
 Rod Elliott's site [sound-au.com](https://sound-au.com/index.html) explained most of what I needed for this project.
 
 [Learn About Electronics: Baxandall tone control](https://learnabout-electronics.org/Amplifiers/amplifiers42.php) explains how the bass and treble controls work and what the response looks like with the pots centered.
 
 [This video](https://www.youtube.com/watch?v=f8DllUXnWA0) helped me see which path each frequency takes through the tone circuit.
- 
->>>>>>> 9a764a377264ab50dceae4720dc4e1f97ffaf872
