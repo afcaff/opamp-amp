@@ -43,6 +43,7 @@ Full circuit simulation: [FullCircuitsim/](FullCircuitsim/)
 
 ## PCB
 After verifying everything on the breadboard, I designed a two layer board in KiCad. Every part is through-hole and had soldered. The pots and audio jacks mount directly to the board.
+
 ![3D](media/audiopamp.png)
 ![PCB](media/PCB.png)
 Schematic: [docs/PrintUSchematic.pdf](docs/PrintUSchematic.pdf)
