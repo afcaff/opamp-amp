@@ -14,15 +14,15 @@ Labeled Circuit:
 
 ## Specs
 
-| | Target | Calculated | Measured (breadboard) |
-|---|---|---|---|
-| Gain | 0 to 20 dB | 0 to 20.8 dB | 0 to 21.4 dB |
-| Flat response (both tone pots centered, 400 Hz) | ±1 dB | 0 dB | +0.6 dB |
-| Bass at 50 Hz | ±12 dB | +8.2 / −8.2 dB | +8.3 / −8.5 dB |
-| Treble at 10 kHz | ±12 dB | +11.2 / −11.2 dB | +11.8 / −12.5 dB |
-| Virtual ground | 7.5 V | 7.5 V | 7.48 V |
+| Item | Target | Measured (breadboard) |
+|---|---|---|
+| Gain | 0 to 20 dB | 0 to 21.4 dB |
+| Flat response (both tone pots centered, 400 Hz) | ±1 dB | +0.6 dB |
+| Bass at 50 Hz | ±12 dB |  +8.3 / −8.5 dB |
+| Treble at 10 kHz | ±12 dB |  +11.8 / −12.5 dB |
+| Virtual ground | 7.5 V |  7.48 V |
 
-The bass control only reaches about ±8 dB at 50 Hz because the shelf isn't fully developed there yet (C<sub>B</sub> is about 97k at 50 Hz, close to the pot value). It reaches ±12 dB further down. The calculated numbers came from a nodal analysis of the full tone network using the measured 87k bass pot, and that analysis predicted the ±8 dB too.
+The bass control only reaches about ±8 dB at 50 Hz because the shelf isn't fully developed there yet (C<sub>B</sub> is about 97k at 50 Hz, close to the pot value). It reaches ±12 dB further down.
 
 ## Circuit
 
@@ -36,10 +36,34 @@ The second half is a Baxandall tone control. A lot of published versions use 10k
 It runs on a single 15 V supply. The TLE2426 makes a 7.5 V virtual ground so the op amps can swing both ways around it.
 
 Hand calculations: [measure/HandCalcs.pdf](measure/HandCalcs.pdf)
+
 Full circuit simulation: [FullCircuitsim/](FullCircuitsim/)
 
 ![PSpice bass sweep](sim/baxandall/ActiveBaxandall/12dBRange-Bass.png)
 
+## PCB
+After verifying everything on the breadboard, I designed a two layer board in KiCad. Every part is through-hole and had soldered. The pots and audio jacks mount directly to the board.
+![3D](media/audiopamp.png)
+![PCB](media/PCB.png)
+Schematic: [docs/PrintUSchematic.pdf](docs/PrintUSchematic.pdf)
+
+### Board
+| Item | Value |
+|---|---|
+| Size | about 100 × 60 mm |
+| Layers | 2 (signals on top, VGround on bottom) |
+| Parts | through-hole, TL072 and TLE2426 in DIP-8 sockets |
+| Power input | 2 pin screw terminal, 15 V, with a series diode  |
+| Decoupling | 100 µF + 100 nF at the supply input, 100 nF next to the TL072 |
+| Traces | 0.4 mm signal, 0.8 mm power |
+| Mounting | M3 holes for standoffs |
+
+### Files
+ 
+- KiCad project: [`kicad/`](kicad/) (schematic, board, and custom footprint library)
+- Gerbers: [`kicad/gerbers/opamp-amp-gerbers.zip`](kicad/gerbers/opamp-amp-gerbers.zip).
+
+ 
 ## Breadboard measurements
 
 All readings were taken with a multimeter on AC volts, black probe on the virtual ground, using sine tones from a laptop.
