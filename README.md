@@ -42,7 +42,7 @@ Full circuit simulation: [FullCircuitsim/](FullCircuitsim/)
 ![PSpice bass sweep](sim/baxandall/ActiveBaxandall/12dBRange-Bass.png)
 
 ## PCB
-After verifying everything on the breadboard, I designed a two layer board in KiCad. Every part is through-hole and had soldered. The pots and audio jacks mount directly to the board.
+After verifying everything on the breadboard, I designed a two layer board in KiCad. Every part is through-hole and designed for hand soldering. The pots and audio jacks mount directly to the board.
 
 ![3D](media/audiopamp.png)
 ![PCB](media/PCB.png)
@@ -63,7 +63,7 @@ Schematic: [docs/PrintUSchematic.pdf](docs/PrintUSchematic.pdf)
 ### Files
  
 - KiCad project: [`kicad/`](kicad/) 
-- Gerbers: [`kicad/gerbers/opamp-amp-gerbers.zip`](kicad/gerbers/opamp-amp-gerbers.zip)
+- Gerbers: [`kicad/audiopamp/gerber.zip`](kicad/audiopamp/gerber.zip)
 
  
 ## Breadboard measurements
@@ -118,7 +118,6 @@ Every tone measurement landed within about 1.3 dB of the calculation, and most w
 - **Channels seemed to swap.** The STX-3000 jack tabs made bad contact in the breadboard. Soldering Dupont leads to the tabs fixed it.
 - **"No signal."** Laptop volume was at 10%, so the gain stage output was only 7 mV. At 100% the 50 Hz tone distorted and shrank the bass range, so I measured at about 70%.
 - **Tone stage input sagged about 20% at full bass boost.** I ruled out the pot,header placement, the coupling cap, C<sub>T</sub>, and the TL072 itself, and found a leftover 33k test resistor that made it worse. The sag went away with the speaker unplugged, so the cause is a shared ground return between the output and the input/gain stage on the breadboard.
-- **Tone stage input sagged about 20% at full bass boost.** I ruled out the pot, header placement, the coupling cap, C<sub>T</sub>, and the TL072 itself, and found a leftover 33k test resistor that made it worse. The sag went away with the speaker unplugged, so the cause is a shared ground return between the output and the input/gain stage on the breadboard.
 
 ## Equations
 
