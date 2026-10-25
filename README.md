@@ -51,6 +51,7 @@ After verifying everything on the breadboard, I designed a two layer board in Ki
 
 ![3D](media/audiopamp.png)
 ![PCB](media/PCB.png)
+Finished PCB:
 <img width="8160" height="4592" alt="pcbassemble" src="https://github.com/user-attachments/assets/c6937124-df9c-4232-8f12-094f12596c76" />
 
 Schematic: [docs/PrintUSchematic.pdf](docs/PrintUSchematic.pdf)
