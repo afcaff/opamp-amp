@@ -90,7 +90,7 @@ Treble at 10 kHz:
  
 
 ### Files
-- Oscilloscope captures: ['measure/scope'](measure/scope)
+- Oscilloscope captures: [`measure/scope`](measure/scope)
 - KiCad project: [`kicad/`](kicad/) 
 - Gerbers: [`kicad/audiopamp/gerber.zip`](kicad/audiopamp/gerber.zip)
 
