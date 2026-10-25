@@ -1,8 +1,9 @@
 # Op-Amp Preamp
 
-Single-channel audio preamp with gain, bass and treble controls, built around a TL072. I simulated it in PSpice, built it on a breadboard and measured it against my hand calculations.
+Single-channel audio preamp with gain, bass and treble controls, built around a TL072. I simulated it in PSpice, built it on a breadboard, then laid out a PCB in KiCad and measured both.
 
-A phone or laptop plugs into the input and the output goes to a powered speaker. The gain knob turns the signal up to about 11x, and the bass and treble knobs boost or cut by about 12 dB.
+A phone or laptop plugs into the input and the output goes to a powered speaker. The gain knob turns the signal up to about 10x, and the bass and treble knobs boost or cut by about 12 dB.
+
 
 ## Demo video
 
@@ -14,15 +15,14 @@ Labeled Circuit:
 
 ## Specs
 
-| Item | Target | Measured (breadboard) |
-|---|---|---|
-| Gain | 0 to 20 dB | 0 to 21.4 dB |
-| Flat response (both tone pots centered, 400 Hz) | ±1 dB | +0.6 dB |
-| Bass at 50 Hz | ±12 dB |  +8.3 / −8.5 dB |
-| Treble at 10 kHz | ±12 dB |  +11.8 / −12.5 dB |
-| Virtual ground | 7.5 V |  7.48 V |
+|                                                 | Target     | Calculated       | Breadboard (meter) | PCB (meter)      | PCB (scope)              |
+| ----------------------------------------------- | ---------- | ---------------- | ------------------ | ---------------- | ------------------------ |
+| Gain                                            | 0 to 20 dB | 0 to 20.8 dB*    | 0 to 21.4 dB       | 0 to 19.7 dB     | 0 to 19.6 dB             |
+| Flat response (both tone pots centered, 400 Hz) | ±1 dB      | 0 dB             | +0.6 dB            | −0.3 dB          | 0 dB                     |
+| Bass at 50 Hz                                   | ±12 dB     | +8.2 / −8.2 dB   | +8.3 / −8.5 dB     | +8.1 / −8.3 dB   | +8.3 / −8.1 dB           |
+| Treble at 10 kHz                                | ±12 dB     | +11.2 / −11.2 dB | +11.8 / −12.5 dB   | +12.2 / −12.4 dB | +11.4 / cut failed (pot) |
+| Virtual ground                                  | 7.5 V      | 7.5 V            | 7.48 V             | 7.38 V        | —                        |
 
-The bass control only reaches about ±8 dB at 50 Hz because the shelf isn't fully developed there yet (C<sub>B</sub> is about 97k at 50 Hz, close to the pot value). It reaches ±12 dB further down.
 
 ## Circuit
 
@@ -59,6 +59,35 @@ Schematic: [docs/PrintUSchematic.pdf](docs/PrintUSchematic.pdf)
 | Decoupling | 100 µF + 100 nF at the supply input, 100 nF next to the TL072 |
 | Traces | 0.4 mm signal, 0.8 mm power |
 | Mounting | M3 holes for standoffs |
+## PCB measurements
+
+### Gain stage (400 Hz)
+
+
+| Gain pot | In (V) | Out (V) | Gain  | dB   | Scope (dB) | Calculated (dB) |
+| -------- | ------ | ------- | ----- | ---- | ---------- | --------------- |
+| Min      | 0.097  | 0.096   | 0.99x | −0.1 | −0.1       | 0               |
+| Half     | 0.097  | 0.541   | 5.6x  | 14.9 | 14.7       | 14.5            |
+| Max      | 0.097  | 0.941   | 9.7x  | 19.7 | 19.6       | 19.7            |
+ 
+### Tone stage
+ 
+Bass at 50 Hz:
+ 
+| Bass pot   | In (V) | Out (V) | Gain  | dB   | Scope (dB) |
+| ---------- | ------ | ------- | ----- | ---- | ---------- |
+| Full cut   | 0.119  | 0.046   | 0.39x | −8.3 | −8.1       |
+| Center     | 0.119  | 0.120   | 1.01x | +0.1 | +0.1       |
+| Full boost | 0.119  | 0.304   | 2.55x | +8.1 | +8.3       |
+ 
+Treble at 10 kHz:
+ 
+| Treble pot | In (V) | Out (V) | Gain  | dB    | Scope (dB)        |
+| ---------- | ------ | ------- | ----- | ----- | ----------------- |
+| Full cut   | 0.096  | 0.023   | 0.24x | −12.4 | failed (worn pot) |
+| Center     | 0.096  | 0.094   | 0.98x | −0.2  | +0.2              |
+| Full boost | 0.096  | 0.393   | 4.09x | +12.2 | +11.4             |
+ 
 
 ### Files
  
@@ -92,32 +121,36 @@ The input was only 14 mV, which limits the meter to about ±7%, so these are wit
 
 Gain is the tone stage output (pin 7) divided by its input.
 
-Bass at 50 Hz, treble centered:
+Bass at 50 Hz:
 
-| Bass pot | In (V) | Out (V) | Gain | dB | Calculated (dB) |
-|---|---|---|---|---|---|
-| Full cut | 0.254 | 0.096 | 0.38x | −8.5 | −8.2 |
-| Center | 0.254 | 0.245 | 0.96x | −0.3 | 0 |
-| Full boost | 0.254 | 0.657 | 2.59x | +8.3 | +8.2 |
+| Bass pot | In (V) | Out (V) | Gain | dB |
+|---|---|---|---|---|
+| Full cut | 0.254 | 0.096 | 0.38x | −8.5 |
+| Center | 0.254 | 0.245 | 0.96x | −0.3 |
+| Full boost | 0.254 | 0.657 | 2.59x | +8.3 |
 
-Treble at 10 kHz, bass centered:
+Treble at 10 kHz:
 
-| Treble pot | In (V) | Out (V) | Gain | dB | Calculated (dB) |
-|---|---|---|---|---|---|
-| Full cut | 0.126 | 0.030 | 0.24x | −12.5 | −11.2 |
-| Center | 0.126 | 0.127 | 1.01x | +0.1 | 0 |
-| Full boost | 0.126 | 0.491 | 3.90x | +11.8 | +11.2 |
+| Treble pot | In (V) | Out (V) | Gain | dB |
+|---|---|---|---|---|
+| Full cut | 0.126 | 0.030 | 0.24x | −12.5 |
+| Center | 0.126 | 0.127 | 1.01x | +0.1 |
+| Full boost | 0.126 | 0.491 | 3.90x | +11.8 |
 
-At 1 kHz the bass knob does nothing (within 0.1 dB) and the treble knob moves the level by about ±1.8 dB, since the treble shelf starts around 3 kHz. The calculation predicted ±1.9 dB.
-
-Every tone measurement landed within about 1.3 dB of the calculation, and most within 0.3 dB.
+At 1 kHz the bass knob does nothing (within 0.1 dB) and the treble knob moves the level by about ±1.8 dB, since the treble shelf starts around 3 kHz.
 
 ## Problems I ran into
-
+ 
+### Breadboard
+ 
 - **60 Hz hum.** Ground loop between the bench supply and the speaker on its wall charger. Gone with the speaker on battery.
 - **Channels seemed to swap.** The STX-3000 jack tabs made bad contact in the breadboard. Soldering Dupont leads to the tabs fixed it.
 - **"No signal."** Laptop volume was at 10%, so the gain stage output was only 7 mV. At 100% the 50 Hz tone distorted and shrank the bass range, so I measured at about 70%.
-- **Tone stage input sagged about 20% at full bass boost.** I ruled out the pot,header placement, the coupling cap, C<sub>T</sub>, and the TL072 itself, and found a leftover 33k test resistor that made it worse. The sag went away with the speaker unplugged, so the cause is a shared ground return between the output and the input/gain stage on the breadboard.
+
+### PCB
+ 
+- **Dead TL072.** Both outputs were stuck near the positive rail, the board drew 20 to 36 mA, and the TLE2426 got warm. A new chip fixed it. Now I check DC at every op amp pin before putting audio in.
+- **Worn treble pot.** At full cut the 10 kHz output came out about 1.2x the input instead of 0.24x, and there was static below about 40% cut. The joints and traces checked out, so the wiper is losing contact on the worn cut side of the track. I need to replace the 100k Pot.
 
 ## Equations
 
@@ -141,6 +174,6 @@ PSpice, KiCad
 
 Rod Elliott's site [sound-au.com](https://sound-au.com/index.html) explained most of what I needed for this project.
 
-[Learn About Electronics: Baxandall tone control](https://learnabout-electronics.org/Amplifiers/amplifiers42.php) explains how the bass and treble controls work and what the response looks like with the pots centered.
+[Learn About Electronics: Baxandall tone control](https://learnabout-electronics.org/Amplifiers/amplifiers42.php) explains how the bass and treble controls work and what the response looks like.
 
 [This video](https://www.youtube.com/watch?v=f8DllUXnWA0) helped me see which path each frequency takes through the tone circuit.
