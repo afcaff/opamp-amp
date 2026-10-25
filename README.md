@@ -9,12 +9,6 @@ A phone or laptop plugs into the input and the output goes to a powered speaker.
 
 https://github.com/user-attachments/assets/7785a830-bcad-4880-86f1-33a1208d45af
 
-
-
-https://github.com/user-attachments/assets/4ca4d03e-7fc0-4006-ae6a-2c119578cb30
-
-
-
 Labeled Circuit: 
 <img width="3069" height="2058" alt="complete" src="https://github.com/user-attachments/assets/e5e64338-83dd-44fc-af5b-edf8cb9388d1" />
 
@@ -52,7 +46,6 @@ After verifying everything on the breadboard, I designed a two layer board in Ki
 
 ![3D](media/audiopamp.png)
 ![PCB](media/PCB.png)
-![amb](media/pcbassemble.jpg)
 
 Schematic: [docs/PrintUSchematic.pdf](docs/PrintUSchematic.pdf)
 
@@ -97,7 +90,7 @@ Treble at 10 kHz:
  
 
 ### Files
- 
+- Oscilloscope captures: ['measure/scope'](measure/scope)
 - KiCad project: [`kicad/`](kicad/) 
 - Gerbers: [`kicad/audiopamp/gerber.zip`](kicad/audiopamp/gerber.zip)
 
@@ -156,7 +149,7 @@ At 1 kHz the bass knob does nothing (within 0.1 dB) and the treble knob moves th
 
 ### PCB
  
-- **Dead TL072.** Both outputs were stuck near the positive rail, the board drew 20 to 36 mA, and the TLE2426 got warm. A new chip fixed it.
+- **Dead TL072.** Both outputs were stuck near the positive rail, the board drew 20 to 36 mA, and the TLE2426 got warm. A new chip fixed it. Now I check DC at every op amp pin before putting audio in.
 - **Worn treble pot.** At full cut the 10 kHz output came out about 1.2x the input instead of 0.24x, and there was static below about 40% cut. The joints and traces checked out, so the wiper is losing contact on the worn cut side of the track. I need to replace the 100k Pot.
 
 ## Equations
