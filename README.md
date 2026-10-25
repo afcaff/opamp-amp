@@ -9,6 +9,11 @@ A phone or laptop plugs into the input and the output goes to a powered speaker.
 
 https://github.com/user-attachments/assets/7785a830-bcad-4880-86f1-33a1208d45af
 
+
+https://github.com/user-attachments/assets/1d51f3fe-2df7-4398-9d68-10ba9ee7a141
+
+
+
 Labeled Circuit: 
 <img width="3069" height="2058" alt="complete" src="https://github.com/user-attachments/assets/e5e64338-83dd-44fc-af5b-edf8cb9388d1" />
 
@@ -46,6 +51,7 @@ After verifying everything on the breadboard, I designed a two layer board in Ki
 
 ![3D](media/audiopamp.png)
 ![PCB](media/PCB.png)
+<img width="8160" height="4592" alt="pcbassemble" src="https://github.com/user-attachments/assets/c6937124-df9c-4232-8f12-094f12596c76" />
 
 Schematic: [docs/PrintUSchematic.pdf](docs/PrintUSchematic.pdf)
 
